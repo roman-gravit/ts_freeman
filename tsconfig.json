@@ -3,6 +3,10 @@
 		"target": "ES2022",
 		"outDir": "./dist",
 		"rootDir": "./src",
-		"module": "Node16"
+		"noEmitOnError": true,
+		"sourceMap": true,
+		"module": "commonjs",
+		"esModuleInterop": true
+		//"moduleResolution": "NodeNext"
 	}
 }
