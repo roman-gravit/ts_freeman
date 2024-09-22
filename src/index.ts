@@ -1,3 +1,4 @@
+console.log("starting index.ts...");
 import { calculate } from "./calc.js";
 
 function printMessage(msg: string): void {
@@ -11,3 +12,5 @@ printMessage(message);
 const total = calculate(102, 100);
 console.log(`Total: ${total}`);
 
+const { age: MyName } = { age: "Bob"};
+console.log(`MyName: ${MyName}`);
