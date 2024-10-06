@@ -1,16 +1,25 @@
-console.log("starting index.ts...");
-import { calculate } from "./calc.js";
+export {};
+class A {
+	private _date = new Date();
+	getDate(): Date {
+		return this._date;
+	}
 
-function printMessage(msg: string): void {
-	console.log(`Message: ${msg}`);
+	getArrowDate = () => {
+		return this.date;
+	}
+
+	get date(): Date {
+		return this._date;
+	}
+
+	set date(newDate: Date) {
+		this._date = newDate;
+	}
 }
 
-const message = "Hello, TypeScript";
-printMessage(message);
-
-
-const total = calculate(102, 100);
-console.log(`Total: ${total}`);
-
-const { age: MyName } = { age: "Bob"};
-console.log(`MyName: ${MyName}`);
+const a = new A();
+a.date = new Date();
+console.log(Object.getPrototypeOf(a));
+console.log(Object.getPrototypeOf(A));
+console.log(A.prototype);
